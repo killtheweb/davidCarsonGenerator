@@ -7,7 +7,7 @@ void setup() {
   rectMode(CORNERS);
   //filter(GRAY);
   imageMode(CENTER);
-  pg = loadImage("is.png");
+  pg = loadImage("test.png");
   //pg.filter(GRAY);
   pg.resize(width-200, 0);
 }
@@ -42,7 +42,7 @@ void mouseClicked() {
 void keyPressed() {
   if (keyCode == UP) {
     saveFrame("test.jpg");
-    rotate(x);
+    //rotate(x);
     pg = loadImage("test.jpg");
   }
   if (keyCode == LEFT) {
@@ -53,14 +53,5 @@ void keyPressed() {
   }
   if (keyCode == DOWN) {
     blendMode(BLEND);
-  }
-  if (key == 'r' || key == 'R') {
-    x += 15;
-  }
-  if (key == 'e' || key == 'E') {
-    x = 0;
-  }
-  if (key == 'q' || key == 'Q') {
-    x -= 15;
   }
 }
